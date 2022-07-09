@@ -1,0 +1,685 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: system-ui;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-family: system-ui;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    font-size: 1.5rem;
+    border: 2px solid yellow;
+    color: yellow;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgba(255, 255, 0, 0.813);
+    border-color: transparent;
+    transition: all 0.4s ease ease-in;
+}
+
+.primary {
+    font-size: 4rem;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 150px;
+    letter-spacing: 10px;
+
+}
+
+.secondary {
+    font-size: 1.5rem;
+    align-items: center;
+    text-transform: uppercase;
+    text-align: center;
+    color:black;
+
+}
+
+span {
+    color: yellow;
+}
+
+/* header */
+#header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    position: fixed;
+    top: 0px;
+
+
+
+    width: 100%;
+
+
+
+    z-index: 1000;
+}
+
+#header img {
+    height: 90px;
+}
+
+#header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+#header ul li a {
+    margin: 0px 22px;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+
+}
+
+#header ul li a:hover {
+    color: yellow;
+}
+
+/* header end*/
+
+/* hero */
+#hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/css/background/georgie-cobbs-muOHbrFGEQY-unsplash.jpg);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    background-color: black;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#hero div {
+    padding: 0px 250px;
+}
+
+#hero div h1 {
+    font-size: 6rem;
+    position: relative;
+    display: block;
+    width: fit-content;
+    color: transparent;
+    animation: shayan2 1s forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) {
+    animation-delay: 1.6s;
+}
+
+#hero h1:nth-child(3) {
+    animation: shayan3 1s forwards;
+    animation-delay: 2.4s;
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 0%;
+    background-color: yellow;
+    animation: shayan 1s ease forwards;
+    animation-delay: 1s;
+}
+
+#hero h1:nth-child(1) span {
+    animation-delay: 0.5s;
+}
+
+#hero h1:nth-child(2) span {
+    animation-delay: 1.3s;
+
+}
+
+#hero h1:nth-child(3) span {
+    animation-delay: 2s;
+
+}
+
+#hero button {
+    font-size: 3rem;
+    text-size-adjust: 12px;
+    letter-spacing: 2px;
+    padding: 7px 30px;
+    word-spacing: 12px;
+    margin-top: 12px;
+}
+
+
+/* hero ends */
+/* services */
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: linear-gradient(#29323c, #29323c, 50%, #fff 50%, #fff 100%);
+}
+
+#services h1 {
+    color: white;
+    
+}
+
+#services .boxs {
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+#services .boxs .box {
+    position: relative;
+
+    width: 320px;
+    background: #fff;
+    padding: 100px 40px 60px;
+    box-shadow: inset 2px 3px 20px 1px black;
+}
+
+#services .boxs .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+#services .boxs .box:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.box h2 {
+    position: absolute;
+    left: 40px;
+    top: 60px;
+    font-size: 4em;
+    font-weight: 800;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+
+.boxs .box:hover h2 {
+    opacity: 1;
+    color: #29323c;
+    transform: translateY(-40px);
+}
+
+.box h3 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    z-index: 2;
+    color: black;
+    transition: 0.5s;
+}
+
+.box p {
+    position: relative;
+
+    z-index: 2;
+    color: black;
+    transition: 0.5s;
+}
+
+.boxs .box:hover h3 .boxs .box:hover p {
+    color: #29323c;
+   
+
+}
+
+
+/* services end */
+/* about */
+#about{
+    background: transparent;
+    min-height: 100vh;
+}
+#about .layer{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+}
+#about .layer .aboutimg{
+    position: relative;
+    z-index: 1;
+    
+   
+   
+
+    
+}
+#about .layer .aboutimg::after{
+    content: '';
+    position: absolute;
+   border: 12px solid yellow;
+   left: -40px;
+   top: 30px;
+    height: 98%;
+    width: 98%;
+    z-index: -1;
+}
+.layer img{
+    border: 10px solid white;
+}
+#about .layer .right{
+    display: block;
+    width: 500px;
+    margin: 20px;
+
+}
+.right h3{
+    text-align: left;
+    line-height: 50px;
+    font-size: 27px;
+}
+.right p{
+    font-size: 20px;
+    font-weight: 100;
+}
+.right button{
+    color: black;
+    border: 3px solid yellow;
+  background-color: rgba(255, 255, 0, 0.075);
+   margin-top: 18px;
+    padding: 8px 10px;
+
+
+}
+button a{
+    color: black;
+}
+
+.right button:hover a{
+    color: #29323c;
+}
+/* about end */
+/* contact */
+#contact{
+    height: 80vh;
+    margin-top: 10px;
+}
+#contact .boxs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#contact .boxs .box{
+  
+    width: 330px;
+    border-radius: 10px;
+    height: 150px;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.60);
+-webkit-box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.60);
+-moz-box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.60);
+}
+#contact .boxs .box:hover{
+    cursor: context-menu;
+    transition: all 0.2s ease;
+    transition-delay: 0.3s;
+    box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow: 13px 10px 72px 0px rgba(0,0,0,0.20);
+}
+.box .contactimg img{
+    width: 100px;
+}
+.box .contactinfo{
+    text-align: left;
+}
+.box .contactinfo h3{
+    text-align: left;
+    margin-top: 12px;
+    margin-left: 13px;
+}
+.box .contactinfo p{
+    padding: 12px;
+    
+}
+
+
+/* contact end */
+/* footer */
+footer{
+    background-color: #29323c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .logo img{
+    width: 120px;
+    
+  
+}
+footer .logo h3{
+    color: white;
+}
+footer .footerpara{
+    text-align: center;
+    color: white;
+    font-weight: 100;
+    font-size: 19px;
+}
+footer .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+ 
+
+}
+footer .social a img{
+    width: 50px;
+    margin: 2px 15px;
+    height: 50px;
+    filter: grayscale(1);
+}
+footer .social a img:hover{
+    filter: grayscale(0);
+    transition: ease-in all 0.2s;
+}
+footer .copyr p{
+    color: white;
+    font-weight: 20;
+line-height: 20px;
+text-align: center;
+}
+/* footer ends */
+
+/* media quaries for table */
+@media (min-width:700px) and (max-width:1138px) {
+    .primary{
+        font-size: 3.5rem;
+        
+    }
+    #header{
+        flex-direction: column;
+        width: 100%;
+        height: 130px;
+    }
+   #hero{
+      width: 100%;
+  }
+  #hero div{
+      padding: 0px 130px;
+      margin-top: 50px;
+  }
+    #hero .hero h1{
+
+        font-size: 4.6rem;
+       
+    }
+    #hero button{
+        font-size: 2rem;
+    }
+    #services{
+        width: 100%;
+    }
+    #services .boxs{
+        flex-wrap: wrap;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+    }
+    #services .boxs .box{
+        margin: 12px;
+      
+        font-size: 1rem;
+        width: 400px;
+        height: 400px;
+
+    }
+    #about .layer{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #about .layer img{
+        width: 400px;
+    }
+    #about .layer .aboutimg::after{
+        width: 90%;
+        height: 95%;
+    }
+    #about .layer .right{
+        margin-top: 50px;
+        text-align: left;
+    }
+    #contact{
+        width: 100%;
+        height: auto;
+    }
+    #contact h1{
+        text-align: center;
+    }
+    #contact .boxs{
+        display: flex;
+        padding: 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+   #contact .boxs .box{
+      width: 400px;
+      margin: 30px 10px;}
+
+   
+}
+/* media quaries ends */
+
+/* media quaries for phone */
+@media (max-width:700px){
+  .primary{
+      font-size: 2rem;
+      line-height: 45px;
+  }
+  #header{
+  align-items: flex-start;
+  justify-content: left;
+    width: 100%;
+    height: 100px;
+}
+
+    
+#header .item{
+    display: none;
+}
+   #hero{
+    width: 100%;
+}
+#hero div{
+    padding: 0px 20px;
+    margin-top: 50px;
+}
+  #hero .hero h1{
+
+      font-size: 3.5rem;
+     
+  }
+  #hero button{
+      font-size: 1rem;
+  }
+  #services{
+    width: 100%;
+}
+#services .boxs{
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+#services .boxs .box{
+    margin: 21px 0px;
+  
+    font-size: 1rem;
+    width: 300px;
+    height: 300px;
+
+}
+
+#about .layer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#about .layer img{
+    width: 250px;
+}
+#about .layer .aboutimg::after{
+    width: 80%;
+ 
+    height: 89%;
+}
+#about .layer .right{
+    margin-top: 50px;
+    width: 80%;
+   align-items: center;
+   text-align: center;
+    
+
+}
+.right h3{
+    text-align: center;
+    font-size: 1.3rem;
+}
+.right p{
+    text-align: center;
+    font-size: 1rem;
+
+}
+#contact{
+    width: 100%;
+    height: auto;
+}
+#contact h1{
+    text-align: center;
+}
+#contact .boxs{
+    display: flex;
+
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#contact .boxs .box{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  margin: 30px 10px;
+
+}
+#contact .boxs .box .contactinfo{
+    display: flex;
+    flex-direction: column;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+
+}
+footer .footer img{
+    width: 80px;
+}
+footer .footer h3{
+    font-size: 1.1rem;
+}
+
+}
+/* media quaries for phone ends */
+/* keyframes */
+@keyframes shayan {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes shayan2 {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes shayan3 {
+    100% {
+        color: yellow;
+    }
+
+}
+
+/* keyframes end */
